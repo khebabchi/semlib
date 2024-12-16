@@ -15,7 +15,8 @@ typedef struct
 
 void P(SemSet sem, int sem_num);
 void V(SemSet sem, int sem_num);
-SemSet sem_create_all(const char *path, int id, int sem_count,int initial_value);
+SemSet attach_sem(const char *path, int id, int sem_count);
+SemSet sem_create_all(const char *path, int id, int sem_count, int initial_value);
 SemSet sem_create(const char *path, int id, int sem_count, ... /* initial values */);
 void sem_destroy(SemSet sem);
 void print_sem(SemSet sem);
